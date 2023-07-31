@@ -1,0 +1,39 @@
+# See all files in dir
+ls -la
+# If git repo is created - should see .git directory
+
+git config --global user.email "email@email.com"
+git config --global user.name "user-name"
+
+# Create new git repo
+git init
+
+# Stage filename to be comitted
+git add filename
+# Stage all files
+git add *
+
+#Unstage files
+git rm --cached filename
+# See status of files in CWD (untracked/ staged/ comitted)
+git status
+
+# Commit staged files
+git commit -m "Commit message"
+
+# See previous commits
+git log
+
+
+
+# Add remote repository with given url
+git remote add REMOTE_NAME link
+
+1. Create github repository
+2. Copy ssh_url
+3. git remote add REMOTE_NAME ssh_url
+4. Try git push REMOTE_NAME master (does not work without auth)
+5. Create ssh-key pair: ssh-keygen
+6. cat ~/.ssh/id_rsa.pub
+7. Copy public ssh key to github (Settings -> SSH and GPG keys -> New SSH key)
+8. git push REMOTE_NAME master      - should work
